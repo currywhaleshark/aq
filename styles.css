@@ -1,0 +1,132 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #0f172a;
+  background: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+}
+
+.stats {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.controls {
+  margin-top: 0.9rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+#openInstallBtn {
+  border: 0;
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  background: #0ea5e9;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.floor {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  min-height: 260px;
+}
+
+.slot {
+  border: 2px dashed #94a3b8;
+  border-radius: 12px;
+  background: #f8fafc;
+  min-height: 120px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.slot.ready {
+  border-color: #0284c7;
+  box-shadow: 0 0 0 2px #bae6fd;
+}
+
+.slot.occupied {
+  border-style: solid;
+  border-color: #334155;
+  cursor: not-allowed;
+}
+
+.tank {
+  width: 100%;
+  border-radius: 8px;
+  padding: 0.6rem;
+  text-align: center;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+}
+
+.tank.small {
+  background: #bfdbfe;
+}
+
+.tank.large {
+  background: #93c5fd;
+}
+
+#installDialog {
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 0;
+}
+
+.dialog-form {
+  padding: 1rem;
+  min-width: 320px;
+}
+
+.tank-options {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0.8rem 0;
+}
+
+.tank-options button,
+.actions button {
+  border: 1px solid #94a3b8;
+  border-radius: 8px;
+  padding: 0.55rem;
+  cursor: pointer;
+}
+
+#hint {
+  margin: 0;
+  color: #475569;
+}

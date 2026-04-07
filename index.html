@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Aquarium Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <h1>아쿠아리움 경영 (프로토타입)</h1>
+        <div class="stats">
+          <span>💰 돈: <strong id="money">500</strong></span>
+          <span>🕒 시간: <strong id="time">0</strong>s</span>
+        </div>
+      </header>
+
+      <section class="controls">
+        <button id="openInstallBtn">수조 설치</button>
+        <p id="hint">수조 설치 버튼을 누른 후, 배치할 슬롯을 클릭하세요.</p>
+      </section>
+
+      <section class="floor" id="floor"></section>
+    </main>
+
+    <dialog id="installDialog">
+      <form method="dialog" class="dialog-form">
+        <h2>수조 설치</h2>
+        <p>설치할 수조를 선택하세요.</p>
+        <div class="tank-options" id="tankOptions"></div>
+        <div class="actions">
+          <button value="cancel">닫기</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
